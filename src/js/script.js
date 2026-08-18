@@ -1,5 +1,7 @@
 "use strict";
 
+// theming
+
 const DEFAULT_COLOR = "random";
 const DEFAULT_FONT = "sansSerif";
 
@@ -62,3 +64,45 @@ const currentFont = localStorage.getItem("font");
 
 setColor(currentColor ?? DEFAULT_COLOR);
 setFont(currentFont ?? DEFAULT_FONT);
+
+// dynamic visibility
+
+class RevealEvent extends Event { }
+
+const buttons = document.getElementsByTagName("button");
+const hiddenElements = document.getElementsByClassName("hidden");
+
+for (let button of buttons) {
+  const elementRevealedId = button.dataset.revealElement;
+
+  if (elementRevealedId !== undefined) {
+    const elementRevealed = document.getElementById(elementRevealedId);
+
+    if (elementRevealed === null) {
+      throw ReferenceError(`unknown element #${elementRevealedId}`);
+    }
+
+    button.addEventListener("click", (event) => {
+      if (elementRevealed.classList.contains("hidden")) {
+        elementRevealed.dispatchEvent(new RevealEvent("reveal"));
+
+        button.disabled = true;
+        button.title += " (already started)";
+      }
+    });
+  }
+}
+
+for (let element of hiddenElements) {
+  element.addEventListener("reveal", () => {
+    element.classList.remove("hidden");
+
+    if (element.tagName === "SECTION" && element.id !== "") {
+      const associatedShortLink = document.querySelector(`[data-associated-section=${element.id}]`);
+
+      if (associatedShortLink !== null) {
+        associatedShortLink.dispatchEvent(new RevealEvent("reveal"));
+      }
+    }
+  })
+}
