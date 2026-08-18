@@ -78,13 +78,18 @@ ul.vertical {
   list-style: none;
   padding-left: 0;
 
-  &>li {
+  &>li:not(.hidden) {
     display: inline;
 
     &:not(:nth-of-type(1))::before {
       content: " · ";
     }
   }
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
 }
 
 @media screen and (min-width: 1080px) {
