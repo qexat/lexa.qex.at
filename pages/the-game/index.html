@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta property="og:title" content="lexa - the game" />
+  <meta property="og:description" content="my little club" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lexa.qex.at/the-game/" />
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="/src/local/icon/favicon.gif" />
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <script src="/src/js/script.js" defer></script>
+
+  <title>lexa's homepage</title>
+</head>
+
+<body>
+  <header id="up">
+    <h1>the game</h1>
+
+    <ul class="vertical"></ul>
+  </header>
+
+  <hr />
+
+  <main>
+    <button type="button" name="play-game" title="Start the game" id="play-button"
+      data-reveal-element="game-contents">Play</button>
+
+    <section id="game-contents" class="hidden">
+      <p>You lost the game.</p>
+    </section>
+  </main>
+
+  <hr />
+
+  <footer>
+    <section id="links">
+      <h3 id="links-title">links <a href="#up">(up)</a></h3>
+
+      <ul class="vertical" aria-labelledby="links-title">
+        <li><a href="../">home</a></li>
+        <li><a href="./">the game</a></li>
+      </ul>
+    </section>
+
+  </footer>
+</body>
+
+</html>
