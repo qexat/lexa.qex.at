@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="/src/css/style.css" />
   <script src="/src/js/script.js" defer></script>
 
+  <noscript>
+    <link rel="stylesheet" href="/src/css/noscript.css">
+  </noscript>
+
   <title>lexa's homepage</title>
 </head>
 
@@ -26,14 +30,14 @@
       <li><a href="#socials-and-co">socials & co</a></li>
       <li><a href="#friends">friends</a></li>
       <li><a href="#links">links</a></li>
-      <li><a href="#customize">customize</a></li>
+      <li class="requires-js"><a href="#customize">customize</a></li>
     </ul>
   </header>
 
   <hr />
 
   <main>
-    <aside id="customize">
+    <aside id="customize" class="requires-js">
       <h2>customize <a href="#up">(up)</a></h2>
 
       <button name="reset-theme" title="reset theme" type="button" onclick="javascript:reset();">reset</button>
