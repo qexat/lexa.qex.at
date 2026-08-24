@@ -1,0 +1,7 @@
+:root {
+    --color-primary: light-dark(blue, lightblue);
+}
+
+.requires-js {
+    display: none !important;
+}

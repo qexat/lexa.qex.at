@@ -14,6 +14,10 @@
   <link rel="stylesheet" href="/src/css/style.css" />
   <script src="/src/js/script.js" defer></script>
 
+  <noscript>
+    <link rel="stylesheet" href="/src/css/noscript.css">
+  </noscript>
+
   <title>lexa's homepage</title>
 </head>
 
@@ -27,8 +31,12 @@
   <hr />
 
   <main>
-    <button type="button" name="play-game" title="Start the game" id="play-button"
-      data-reveal-element="game-contents">Play</button>
+    <button type="button" name="play-game" title="Start the game" id="play-button" data-reveal-element="game-contents"
+      class="requires-js">Play</button>
+
+    <noscript>
+      <p>This section requires JavaScript to be enabled.</p>
+    </noscript>
 
     <section id="game-contents" class="hidden">
       <p>You lost the game.</p>
