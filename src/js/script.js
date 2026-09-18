@@ -19,6 +19,7 @@ const fonts = {
   sansSerif: ['"Host Grotesk"', "sans-serif"],
   serif: ['"Charis SIL"', "serif"],
   monospace: ['"Lilex"', "monospace"],
+  point: ['"Bitcount Single"', "monospace"],
   dyslexic: ['"Atkison Hyperlegible"', "sans-serif"],
 }
 
