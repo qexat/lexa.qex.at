@@ -29,6 +29,12 @@ const fontNames = Object.keys(fonts);
 function setColor(name) {
   localStorage.setItem("color", name);
 
+  const colorSelect = document.getElementById("color-select");
+
+  if (colorSelect !== null) {
+    colorSelect.value = name;
+  }
+
   if (name === "random") {
     name = colorNames[Date.now() % colorNames.length];
   }
@@ -43,6 +49,12 @@ function setColor(name) {
 
 function setFont(name) {
   localStorage.setItem("font", name);
+
+  const fontSelect = document.getElementById("font-select");
+
+  if (fontSelect !== null) {
+    fontSelect.value = name;
+  }
 
   const [fontName, fallback] = fonts[name];
 
@@ -65,6 +77,14 @@ const currentFont = localStorage.getItem("font");
 
 setColor(currentColor ?? DEFAULT_COLOR);
 setFont(currentFont ?? DEFAULT_FONT);
+
+document.getElementById("color-select")?.addEventListener("change", (event) => {
+  setColor(event.target.value);
+});
+
+document.getElementById("font-select")?.addEventListener("change", (event) => {
+  setFont(event.target.value);
+});
 
 // dynamic visibility
 

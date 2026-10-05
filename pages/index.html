@@ -45,41 +45,28 @@
       <section id="color">
         <h3 id="color-title">color</h3>
 
-        <ul class="vertical" aria-labelledby="color-title">
-          <li><button name="set-color-red" title="set color red" type="button"
-              onclick="javascript:setColor('red');">red</button></li>
-          <li><button name="set-color-yellow" title="set color yellow" type="button"
-              onclick="javascript:setColor('yellow');">yellow</button></li>
-          <li><button name="set-color-green" title="set color green" type="button"
-              onclick="javascript:setColor('green');">green</button></li>
-          <li><button name="set-color-cyan" title="set color cyan" type="button"
-              onclick="javascript:setColor('cyan');">cyan</button></li>
-          <li><button name="set-color-blue" title="set color blue" type="button"
-              onclick="javascript:setColor('blue');">blue</button></li>
-          <li><button name="set-color-purple" title="set color purple" type="button"
-              onclick="javascript:setColor('purple');">purple</button></li>
-          <li><button name="set-color-gray" title="set color gray" type="button"
-              onclick="javascript:setColor('gray');">gray</button></li>
-          <li><button name="set-color-random" title="set color random" type="button"
-              onclick="javascript:setColor('random');">random</button></li>
-        </ul>
+        <select id="color-select" name="color" aria-labelledby="color-title">
+          <option value="red">red</option>
+          <option value="yellow">yellow</option>
+          <option value="green">green</option>
+          <option value="cyan">cyan</option>
+          <option value="blue">blue</option>
+          <option value="purple">purple</option>
+          <option value="gray">gray</option>
+          <option value="random">random</option>
+        </select>
       </section>
 
       <section id="font">
         <h3 id="font-title">font</h3>
 
-        <ul class="vertical" aria-labelledby="font-title">
-          <li><button name="set-font-sans-serif" title="set font sans-serif" type="button"
-              onclick="javascript:setFont('sansSerif')">sans-serif</button></li>
-          <li><button name="set-font-serif" title="set font serif" type="button"
-              onclick="javascript:setFont('serif')">serif</button></li>
-          <li><button name="set-font-monospace" title="set font monospace" type="button"
-              onclick="javascript:setFont('monospace')">monospace</button></li>
-          <li><button name="set-font-point" title="set font point" type="button"
-              onclick="javascript:setFont('point')">point</button></li>
-          <li><button name="set-color-dyslexic" title="set font dyslexic" type="button"
-              onclick="javascript:setFont('dyslexic')">dyslexic</button></li>
-        </ul>
+        <select id="font-select" name="font" aria-labelledby="font-title">
+          <option value="sansSerif">sans-serif</option>
+          <option value="serif">serif</option>
+          <option value="monospace">monospace</option>
+          <option value="point">point</option>
+          <option value="dyslexic">dyslexic</option>
+        </select>
       </section>
 
     </aside>
