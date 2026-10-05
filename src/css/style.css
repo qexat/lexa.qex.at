@@ -54,7 +54,8 @@ h3 {
 
 p,
 li,
-button {
+button,
+select {
   font-family: var(--font-family);
 }
 
@@ -62,7 +63,8 @@ a {
   color: var(--color-primary);
 }
 
-button {
+button,
+select {
   background-color: var(--color-primary);
   color: light-dark(white, black);
   border: none;
